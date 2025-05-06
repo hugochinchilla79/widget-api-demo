@@ -1,0 +1,19 @@
+{
+    "name": "nextjs-cart-widget-demo",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "animate.css": "^4.1.1",
+        "axios": "^1.6.8",
+        "bootstrap": "^5.3.6",
+        "bootstrap-icons": "^1.12.1",
+        "next": "^14.0.0",
+        "react": "^18.2.0",
+        "react-bootstrap": "^2.10.9",
+        "react-dom": "^18.2.0"
+    }
+}

@@ -1,0 +1,13 @@
+[
+    {
+      "id": 222,
+      "name": "El Salvador",
+      "states": ["San Salvador", "La Libertad", "Santa Ana"]
+    },
+    {
+      "id": 223,
+      "name": "Guatemala",
+      "states": ["Guatemala", "Quetzaltenango", "Sacatepéquez"]
+    }
+  ]
+  
