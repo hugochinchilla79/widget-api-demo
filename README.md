@@ -98,12 +98,12 @@ Esto ejecuta el entorno desde un build ya generado. Ideal para revisión sin ent
 openssl req \
   -x509 -nodes -days 365 \
   -newkey rsa:2048 \
-  -keyout localhost.key \
-  -out localhost.crt \
+  -keyout demo.widget.api.key \
+  -out demo.widget.api.crt \
   -subj "/C=US/ST=Local/L=Dev/O=Dev/CN=demo.widget.api"
 ```
 
-Esto generará `localhost.crt` y `localhost.key`.
+Esto generará `demo.widget.api.crt` y `demo.widget.api.key`.
 Asegúrate de montarlos correctamente en tu `nginx` y referenciarlos desde la configuración SSL.
 
 > ⚠️ Estos certificados son solo para uso en ambientes locales. Navegadores como Chrome y Firefox pueden mostrar advertencias.
