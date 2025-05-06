@@ -71,24 +71,6 @@ Asegúrate de usar el prefijo `NEXT_PUBLIC_` para que las variables estén dispo
 
 ---
 
-## ▶️ Ejecución en Modo Desarrollo
-
-```bash
-./run-dev.sh
-```
-
-Esto construirá la imagen y levantará los servicios con `docker-compose.dev.yml`, permitiendo observar los cambios en tiempo real.
-
-## ▶️ Ejecución en Modo Demo (build estatico)
-
-```bash
-./run-demo.sh
-```
-
-Esto ejecuta el entorno desde un build ya generado. Ideal para revisión sin entorno de desarrollo activo.
-
----
-
 ## 🔒 Generar Certificados Autofirmados (Solo para pruebas locales)
 
 1. Abre tu terminal en la carpeta `nginx/certs`
@@ -107,6 +89,24 @@ Esto generará `demo.widget.api.crt` y `demo.widget.api.key`.
 Asegúrate de montarlos correctamente en tu `nginx` y referenciarlos desde la configuración SSL.
 
 > ⚠️ Estos certificados son solo para uso en ambientes locales. Navegadores como Chrome y Firefox pueden mostrar advertencias.
+
+---
+
+## ▶️ Ejecución en Modo Desarrollo
+
+```bash
+./run-dev.sh
+```
+
+Esto construirá la imagen y levantará los servicios con `docker-compose.dev.yml`, permitiendo observar los cambios en tiempo real.
+
+## ▶️ Ejecución en Modo Demo (build estatico)
+
+```bash
+./run-demo.sh
+```
+
+Esto ejecuta el entorno desde un build ya generado. Ideal para revisión sin entorno de desarrollo activo.
 
 ---
 
