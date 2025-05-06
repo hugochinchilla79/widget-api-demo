@@ -50,7 +50,7 @@ Asegúrate de copiar `.env.example` a `.env` y ajustar tus valores:
 WIDGET_SUBNET=175.90.0.0/16
 NGINX_IP=175.90.0.3
 WEB_IP=175.90.0.4
-NGINX_PORT=8443
+NGINX_PORT=443
 
 NEXT_PUBLIC_API_BASE_URL=https://sandbox-api.terracall.net
 NEXT_PUBLIC_WIDGET_RENDER_URL=https://sandbox-payer.pagadito.com
@@ -59,7 +59,10 @@ NEXT_PUBLIC_CLIENT_SECRET=
 NEXT_PUBLIC_CURRENCY_ID=USD
 ```
 
-El archivo `app/config/widget-config.js` ahora toma valores desde variables de entorno gracias a `process.env`:
+Asegurate que NGINX_PORT tenga un puerto libre configurado en tu ambiente, ya que de estar ocupado el puerto 443, dará error al inicializar los contenedores.
+Es recomendado liberar (solo para pruebas) el puerto 443 y dejarlo que lo use este demo. De esa manera podrás acceder sin puertos en la URL.
+
+El archivo `app/config/widget-config.js` toma valores desde variables de entorno gracias a `process.env`:
 
 ```js
 const config = {
@@ -124,6 +127,11 @@ Para entornos Linux o MacOS:
 175.90.0.3 demo.widget.api
 ```
 
+Para entornos de Mac OS es probable que necesites un adaptador para conectar el contenedor con la IP mencionada
+Puedes visitar
+https://github.com/chipmk/docker-mac-net-connect
+para poder realizar el proceso
+
 Para entornos windows, dependiendo de tu configuración de docker podría verse así:
 
 ```
@@ -133,6 +141,11 @@ Para entornos windows, dependiendo de tu configuración de docker podría verse 
 ---
 
 Si todo está correctamente configurado, puedes visitar [https://demo.widget.api](https://demo.widget.api) y verás algo como esto:
+
+Si configuraste un puerto diferente a NGINX_PORT=443, tendrás que visitar la url con ese número de puerto.
+Ejemplo: NGINX_PORT=8443
+https://demo.widget.api:8443
+
 
 ![Preview](app/public/assets/Preview.png)
 
