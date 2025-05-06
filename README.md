@@ -110,6 +110,20 @@ Esto ejecuta el entorno desde un build ya generado. Ideal para revisión sin ent
 
 ---
 
+Dependiendo de tu entorno deberás configurar tu archivo /etc/hosts
+
+Para entornos Linux o MacOS:
+
+```
+175.90.0.3 demo.widget.api
+```
+
+Para entornos windows, dependiendo de tu configuración de docker podría verse así:
+```
+127.0.0.1 demo.widget.api
+```
+___
+
 ## 🛠 Recomendaciones
 
 * No subas tus certificados al repositorio.
@@ -122,4 +136,3 @@ Esto ejecuta el entorno desde un build ya generado. Ideal para revisión sin ent
 
 Este demo se entrega tal cual y no tiene garantía ni soporte oficial.
 Distribúyelo únicamente con fines de **testing y desarrollo**.
-
