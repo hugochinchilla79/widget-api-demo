@@ -46,6 +46,12 @@ Asegúrate de copiar `.env.example` a `.env` y ajustar tus valores:
 
 ```env
 # Archivo .env
+
+WIDGET_SUBNET=175.90.0.0/16
+NGINX_IP=175.90.0.3
+WEB_IP=175.90.0.4
+NGINX_PORT=8443
+
 NEXT_PUBLIC_API_BASE_URL=https://sandbox-api.terracall.net
 NEXT_PUBLIC_WIDGET_RENDER_URL=https://sandbox-payer.pagadito.com
 NEXT_PUBLIC_CLIENT_ID=
@@ -119,10 +125,18 @@ Para entornos Linux o MacOS:
 ```
 
 Para entornos windows, dependiendo de tu configuración de docker podría verse así:
+
 ```
 127.0.0.1 demo.widget.api
 ```
-___
+
+---
+
+Si todo está correctamente configurado, puedes visitar [https://demo.widget.api](https://demo.widget.api) y verás algo como esto:
+
+![Preview](app/public/assets/Preview.png)
+
+---
 
 ## 🛠 Recomendaciones
 
